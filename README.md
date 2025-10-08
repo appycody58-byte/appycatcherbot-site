@@ -12,4 +12,4 @@ Welcome to **AppyCatcherBot** — a smart Telegram bot built for instant gift-ca
 ➡️ [Visit AppyCatcherBot Portal](https://<your-username>.github.io/appycatcherbot-site/)
 
 ## 🤝 Connect
-Telegram Bot → [@AppyCatcherBot](https://t.me/AppyCatcherBot)# appycatcherbot-site
+Telegram Bot → [@AppyCatcherBot](https://t.me/AppyCatcherBot)# appycatcherbot-site ♥ 
