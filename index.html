@@ -1,19 +1,98 @@
-<index.html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AppyCatcherBot</title>
-  <style>
-    body {font-family: system-ui; background:#ffe6f0; color:#222; text-align:center; margin-top:15vh;}
-    h1 {color:#e60073;}
-    a.btn {display:inline-block; margin-top:20px; padding:10px 20px; background:#e60073; color:white; border-radius:8px; text-decoration:none;}
-    a.btn:hover {background:#ff3385;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wells Fargo • Online Banking Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .logo-font { font-family: 'Playfair Display', serif; }
+        .wf-red { color: #d71e2d; }
+        .wf-gold { color: #f2c12b; }
+        .professional-card { box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1); }
+    </style>
 </head>
-<body>
-  <h1>💖 AppyCatcherBot Portal</h1>
-  <p>Fastest Gift Card & Crypto Payout Integration</p>
-  <a href="https://t.me/AppyCatcherBot" class="btn">Chat with Bot on Telegram</a>
+<body class="bg-slate-50 text-slate-800">
+    <div class="max-w-6xl mx-auto">
+        <!-- Professional Header -->
+        <header class="bg-white border-b border-slate-200 py-4 px-8 flex justify-between items-center sticky top-0 z-50">
+            <div class="flex items-center gap-x-4">
+                <div class="flex items-center">
+                    <span class="text-3xl font-bold wf-red">WF</span>
+                    <span class="ml-1 text-2xl font-semibold tracking-tight">Wells Fargo</span>
+                </div>
+                <span class="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-500">DEMO</span>
+            </div>
+            <div class="flex items-center gap-8 text-sm">
+                <a href="#" class="hover:text-wf-red transition">Accounts</a>
+                <a href="#" class="hover:text-wf-red transition">Transfers</a>
+                <a href="#" class="hover:text-wf-red transition">Payments</a>
+                <a href="#" class="hover:text-wf-red transition">Statements</a>
+                <div id="user-info" class="flex items-center gap-3 pl-6 border-l">
+                    <div class="text-right">
+                        <div id="header-username" class="font-medium"></div>
+                        <div class="text-xs text-slate-500">Personal Checking</div>
+                    </div>
+                    <button onclick="logout()" class="text-slate-500 hover:text-slate-700">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="p-8">
+            <!-- Balance Overview -->
+            <div class="bg-white rounded-2xl p-10 professional-card mb-10 border border-slate-100">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <div class="uppercase tracking-widest text-xs text-slate-500 font-medium">AVAILABLE BALANCE</div>
+                        <div id="balance" class="text-6xl font-semibold tracking-tighter text-slate-900 mt-3">$0.00</div>
+                        <div class="text-emerald-600 text-sm mt-1 flex items-center gap-1">
+                            <i class="fa-solid fa-arrow-trend-up"></i> +2.4% this month
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-sm text-slate-500">Account •••• 4242</div>
+                        <div class="mt-6 flex gap-4">
+                            <button onclick="showModal('deposit')" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-xl font-medium flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-plus"></i> Deposit
+                            </button>
+                            <button onclick="showModal('transfer')" class="flex-1 bg-slate-900 hover:bg-black text-white px-8 py-4 rounded-xl font-medium flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-arrow-right-arrow-left"></i> Transfer
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-6 mb-12">
+                <div class="bg-white p-6 rounded-2xl professional-card border border-slate-100">
+                    <div class="text-slate-500 text-sm">Total Deposits</div>
+                    <div class="text-3xl font-semibold mt-2">$124,850</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl professional-card border border-slate-100">
+                    <div class="text-slate-500 text-sm">Pending Transfers</div>
+                    <div class="text-3xl font-semibold mt-2 text-amber-600">$2,450</div>
+                </div>
+                <div class="bg-white p-6 rounded-2xl professional-card border border-slate-100">
+                    <div class="text-slate-500 text-sm">Last Transaction</div>
+                    <div class="text-3xl font-semibold mt-2">Today</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function logout() {
+            alert('Logged out successfully');
+        }
+        function showModal(type) {
+            alert('Opening ' + type + ' modal');
+        }
+    </script>
 </body>
 </html>
